@@ -6,11 +6,21 @@ export default function About() {
   return (
     <div className="py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <SectionHeader
-          eyebrow="About me"
-          title="People-first. Data-informed. Results-obsessed."
-          description={profile.summary}
-        />
+        <div className="grid md:grid-cols-[260px_1fr] gap-10 items-center mb-12">
+          <div className="relative mx-auto md:mx-0">
+            <div className="absolute -inset-3 bg-gradient-to-br from-brand/30 to-accent/20 rounded-2xl blur-xl" />
+            <img
+              src={profile.photo}
+              alt={profile.name}
+              className="relative w-56 h-56 md:w-60 md:h-60 rounded-2xl object-cover shadow-xl border-4 border-white"
+            />
+          </div>
+          <SectionHeader
+            eyebrow="About me"
+            title="People-first. Data-informed. Results-obsessed."
+            description={profile.summary}
+          />
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           <div className="p-6 rounded-xl bg-white border border-slate-200">

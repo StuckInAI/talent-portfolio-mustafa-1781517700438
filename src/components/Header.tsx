@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Users } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import clsx from 'clsx';
 import { nav, profile } from '@/lib/data';
 
@@ -10,10 +10,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="w-9 h-9 rounded-lg bg-brand text-white flex items-center justify-center shadow-sm group-hover:bg-brand-dark transition">
-            <Users size={18} />
-          </span>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src={profile.photo}
+            alt={profile.name}
+            className="w-10 h-10 rounded-full object-cover ring-2 ring-brand/30 group-hover:ring-brand transition"
+          />
           <div className="leading-tight">
             <div className="font-semibold text-ink">{profile.name}</div>
             <div className="text-xs text-slate-500">{profile.role}</div>

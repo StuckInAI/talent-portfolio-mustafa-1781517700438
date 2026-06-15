@@ -8,6 +8,7 @@ export const profile = {
   email: 'alex.morgan@example.com',
   phone: '+1 (415) 555-0142',
   linkedin: 'https://linkedin.com/in/alexmorgan',
+  photo: '/images/Passport-Photo.jpg',
   summary:
     "I'm a Talent Acquisition leader with 10+ years of experience scaling teams across tech, fintech, and healthcare. I partner with executives to design hiring strategies that move the needle — reducing time-to-hire, improving quality of hire, and building diverse, high-performing teams.",
 };

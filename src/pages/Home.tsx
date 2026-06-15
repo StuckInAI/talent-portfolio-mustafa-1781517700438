@@ -39,9 +39,11 @@ export default function Home() {
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand/20 rounded-full blur-2xl" />
             <div className="relative bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-brand to-brand-light text-white flex items-center justify-center text-2xl font-bold">
-                  {profile.name.split(' ').map((n) => n[0]).join('')}
-                </div>
+                <img
+                  src={profile.photo}
+                  alt={profile.name}
+                  className="w-16 h-16 rounded-full object-cover ring-2 ring-brand/20 shadow-sm"
+                />
                 <div>
                   <div className="font-semibold text-ink">{profile.name}</div>
                   <div className="text-sm text-slate-500">{profile.location}</div>
